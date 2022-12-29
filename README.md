@@ -1,20 +1,14 @@
 # OOP.Assignment1
 
-יש לנו 5 מחלקות :  
-רוצים שלמחלקה UndoableStringBuilder תהיה אופציה "לעדכן" רשימה של אנשים 
-בשינויים שהיא עוברת , כלומר כל פעם שמשתנה במחרוזת משהו כל מי שרוצה לדעת 
-נרשם לקבוצת העדכונים ומקבל התראה על שינוי וגם את המחרוזת העדכנית.
+We have 5 classes:
+We want the UndoableStringBuilder class to have an option to "update" a list of people with the changes they are going through, that is, every time something changes in the string, everyone who wants to know is registered to the update group and receives a notification of a change and the latest string as well.
 
-ConcreteMember –  מייצגת מימוש של "לקוח" שכל פעם מתעדכן כאשר יש שינוי 
-במחרוזת.
-הוספנו אופציה ללקוח לשנות את המחרוזת ולעדכן את שאר המשתמשים בשינוי.
-דרך הפונקציה "memberUpdate()"
-Member (=observer) – ממשק עם הצהרה על הפונקציה של עדכון המשתמש / "הלקוח"
-GroupAdmin – המחלקה שמחזיקה רשימת לקוחות ומחרוזת ובפועל שולחת הודעת עדכון לכל 
-הלקוחות כאשר יש שינוי במחרוזת.
-  (observable=) Sender – הממשק שאותו מממשת המחלקה GroupAdmin שבו יש הצהרות על הפונקציות של העדכון משתמשים.
+ConcreteMember - represents an implementation of a "client" that is updated every time there is a change in the string.
+member (=observer) - an interface with a declaration of the function of updating a user / "customer" 
+GroupAdmin - the class that holds a list of customers and a string and executes an update message for any information when there is a change in the string.
+ (observable=) Sender – the interface implemented by the GroupAdmin class where there are statements about the functions of the user update.
 
-UndoableStringBuilder – המחלקה המקורית עם הפעולות השונות לשינוי מחרוזת.
+UndoableStringBuilder – the original class with the various operations for changing a string.
 
-הוספנו טסטים נוספים דרך JvmUtilities 
-שבודקים את גדול הזכרון הממומש ואת כתובת הזיכרון
+We have added additional tests through JvmUtilities that check the actual memory size and the memory address
+
